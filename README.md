@@ -42,7 +42,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 ![Screenshot 2025-02-14 203813](https://github.com/user-attachments/assets/61a1cea0-ab09-4a25-98c5-cc98d1e54d07)
 
-<p>Use Remote Desktop to connect to your Windows 10 Virtual Machine</p>
+<p>Use Remote Desktop to connect to Windows 10 Virtual Machine</p>
 <br />
 
 ![Screenshot 2025-02-14 204013](https://github.com/user-attachments/assets/723bb893-3e85-431d-b47b-c20c3bdc19e3)
@@ -74,7 +74,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 ![Screenshot 2025-02-14 211535](https://github.com/user-attachments/assets/b73234d5-e76c-41a2-bd23-d4d2128301b2)
 
-<p>Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM</p>
+<p>Initiate a perpetual/non-stop ping from your Windows 10 VM to Ubuntu VM</p>
 <p>- Observe ping requests and replies within WireShark</p>
 <br />
 
@@ -83,8 +83,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 ![Screenshot 2025-02-14 212208](https://github.com/user-attachments/assets/0c46f327-c83b-4c6c-b55f-773279a39d6e)
 
 
-<p>Open the Network Security Group your Ubuntu VM is using and disable incoming
- (inbound) ICMP traffic</p>
+<p>Open the Network Security Group, Ubuntu VM is using and disable incoming
+(inbound) ICMP traffic</p>
 <br />
 
 ![Screenshot 2025-02-14 212330](https://github.com/user-attachments/assets/650ca876-81ce-4555-adae-357a7f800c6a)
@@ -95,7 +95,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 ![Screenshot 2025-02-14 212831](https://github.com/user-attachments/assets/479a85af-55fb-4204-8f9c-6cc27b1217f0)
 
-<p>Re-enable ICMP traffic for the Network Security Group your Ubuntu VM is</p>
+<p>Re-enable ICMP traffic for the Network Security Group</p>
 <br />
 
 ![Screenshot 2025-02-14 213006](https://github.com/user-attachments/assets/12953c73-354b-4b1f-8222-450a3aa45ef3)
