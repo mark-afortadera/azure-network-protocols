@@ -13,6 +13,10 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Various Command-Line Tools
 - Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
 - Wireshark (Protocol Analyzer)
+- Observe SSH Traffic
+- Observe DHCP Traffic
+- Observe DNS Traffic
+- Observe RDP Traffic)
 
 <h2>Operating Systems Used </h2>
 
@@ -102,4 +106,60 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the
  command line Ping activity </p>
+<br />
+
+![Screenshot 2025-02-17 161823](https://github.com/user-attachments/assets/ad48ca4a-7b5a-4263-b827-8e036e3b43ba)
+![Screenshot 2025-02-17 161920](https://github.com/user-attachments/assets/b7888fd0-87ad-4ad8-a1ec-715895bed067)
+
+<p>Filter for SSH traffic only</p>
+<p>From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine (via its private IP
+ address)</p>
+<p>Open PowerShell, and type: ssh labuser@(Private IP Address)</p>
+<br />
+
+![Screenshot 2025-02-17 163811](https://github.com/user-attachments/assets/684f79f6-639c-4a02-8f4d-304db1d6bc19)
+
+<p>Type commands (username, pwd, etc) into the linux SSH connection and
+ observe SSH traffic spam in WireShark</p>
+<br />
+
+![Screenshot 2025-02-17 162924](https://github.com/user-attachments/assets/b845b5d8-829c-4dc9-a5b0-e7082e896036)
+
+<p>Exit the SSH connection by typing ‘exit’ and pressing [Enter]</p>
+<br />
+
+![Screenshot 2025-02-17 165245](https://github.com/user-attachments/assets/04fbea19-66b0-4b8e-b508-0b36bf06717e)
+![Screenshot 2025-02-17 165539](https://github.com/user-attachments/assets/68539c2b-39a8-47b6-8a3d-b196df989b7f)
+
+<p>Back in Wireshark, filter for DHCP traffic only</p>
+<p>From your Windows 10 VM, attempt to issue your VM a new IP address from the
+ command line</p>
+<br />
+
+![Screenshot 2025-02-17 165642](https://github.com/user-attachments/assets/692f41e1-2476-448d-af64-3bb102dd2228)
+
+<p>Open PowerShell as admin and run: ipconfig /renew</p>
+<br />
+
+![Screenshot 2025-02-17 165734](https://github.com/user-attachments/assets/89e479b7-48fe-46ff-bd6d-39c46d33b5fe)
+
+<p>Observe the DHCP traffic appearing in WireShark</p>
+<p>- This sequence shows the normal process of a device releasing an old IP address and acquiring a new one through DHCP</p>
+<br />
+
+![Screenshot 2025-02-17 171138](https://github.com/user-attachments/assets/a3f88be0-5823-4b6b-be68-058f0e3179fc)
+
+<p>Back in Wireshark, filter for DNS traffic only</p>
+<p>From your Windows 10 VM within a command line, use nslookup to see what
+ google.com and disney.com’s IP addresses are</p>
+<p>- Observe the DNS traffic being show in WireShark</p>
+<br />
+
+![Screenshot 2025-02-17 172046](https://github.com/user-attachments/assets/66dee761-df42-4950-b252-65524e45f1d5)
+
+<p>Back in Wireshark, filter for RDP traffic only (tcp.port == 3389)</p>
+<p>- Observe the immediate non-stop spam of traffic</p>
+<p>- The RDP protocol continuously transmits data as a live stream between computers, 
+ causing non-stop traffic even when no activity is being performed from one computer to another,
+ therefore traffic is always being transmitted.</p>
 <br />
